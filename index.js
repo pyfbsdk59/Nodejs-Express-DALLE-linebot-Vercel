@@ -46,12 +46,12 @@ const handleEvent = async (event) => {
 
     
     //self.image_url = response['data'][0]['url'].strip()
-    picURL = { 
-        type: 'image',
-        originalContentUrl: image_url, //原始網址
-        previewImageUrlpic: image_url, //縮圖網址
+    let picURL = { 
+      type: 'image',
+      originalContentUrl: image_url, //原始網址
+      previewImageUrlpic: image_url //縮圖網址
 
-      }      
+    }      
 
     
     return client.replyMessage(event.replyToken, picURL).catch((err) => {
