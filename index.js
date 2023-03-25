@@ -40,14 +40,16 @@ const handleEvent = async (event) => {
       n: 1,
       size: "1024x1024",
     });
-
-
+    
+    let originalContentUrl = response.data.data[0].url;  //原始網址
+    let previewImageUrlpic = response.data.data[1].url;  //縮圖網址
     
     //self.image_url = response['data'][0]['url'].strip()
     picURL = { 
         type: 'image',
-        originalContentUrl: response.data[0].url,  //原始網址
-        previewImageUrlpic: response.data[1].url,  //縮圖網址
+        originalContentUrl,
+        previewImageUrlpic,
+
       }      
 
     
