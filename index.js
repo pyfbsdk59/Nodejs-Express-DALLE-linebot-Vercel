@@ -37,17 +37,17 @@ const handleEvent = async (event) => {
     
     const response = await openai.createImage({
       prompt: event.message.text, //人類的提示
-      n: 2,
+      n: 1,
       size: "1024x1024",
     });
 
 
-    let pic = response.data[0].url,
-
+    
+    //self.image_url = response['data'][0]['url'].strip()
     picURL = { 
         type: 'image',
-        pic,  //原始網址
-        pic,  //縮圖網址
+        originalContentUrl: response.data[0].url,  //原始網址
+        previewImageUrlpic: response.data[1].url,  //縮圖網址
       }      
 
     
