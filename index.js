@@ -51,9 +51,9 @@ const handleEvent = async (event) => {
     
     return client.replyMessage(event.replyToken, 
       { 
-      type: 'image',
-      image_url, //原始網址
-      image_url //縮圖網址
+      type: 'text',
+      text: image_url, //原始網址
+      //image_url, //縮圖網址
 
     }
     ).catch((err) => {
