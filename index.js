@@ -42,12 +42,12 @@ const handleEvent = async (event) => {
     });
 
 
-    pic = response.data[0].url,
+    let pic = response.data[0].url,
 
     picURL = { 
         type: 'image',
         pic,  //原始網址
-        pic  //縮圖網址
+        pic,  //縮圖網址
       }      
 
     
